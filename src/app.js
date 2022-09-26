@@ -6,6 +6,8 @@ const forcast = require('./forcast.js')
 
 const app = express();
 
+const port = process.env.PORT || 3000;
+
 const publicDirpath = path.join(__dirname, '../public');
 
 app.use(express.static(publicDirpath))
@@ -46,7 +48,7 @@ app.get('*', (req, res) => {
     res.send('404 not found!!')
 })
 
-app.listen(3000, () => {
-    console.log('Express server is running');
+app.listen(port, () => {
+    console.log('Express server is running on port ' + port);
 })
 
