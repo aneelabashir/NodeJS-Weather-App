@@ -27,7 +27,7 @@ weatherForm.addEventListener('submit', (e) => {
                 messgaeone.textContent = data.error;
             }
             else {
-                messgaeone.textContent = 'Lahore temprate: ' +  data.temperature;
+                messgaeone.textContent = 'Temprate: ' +  data.temperature;
                 messgaetwo.textContent =  'Wind speed: ' + data.wind_speed;
                 console.log(data);
             }
